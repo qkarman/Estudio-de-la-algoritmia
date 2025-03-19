@@ -12,13 +12,20 @@ public class Problema_Uno
 {
     //Creamos este espacio para manejar las variables globales
     private String busqueda;
-    List<String> almacen = new ArrayList<>();
+    private List<String> almacen = new ArrayList<>();
+    Problema_Uno_Tipos invocar = new Problema_Uno_Tipos();
 
     //Creamos el metodo main para poder probar nuestro programa de la prueba y error
     public static void main(String[] args)
     {
         Problema_Uno invocar = new Problema_Uno();
         invocar.dateNote();
+    }
+
+    //Creamos un metodo getter para poder acceder al inventario
+    public List<String> getAlmacen()
+    {
+        return almacen;
     }
 
     //* En este metodo donde se va a contener los datos de tipo Integer
@@ -67,32 +74,7 @@ public class Problema_Uno
 
         JOptionPane.showMessageDialog(null,"Datos almacenados: " + almacen);
 
-        gestionUnion();
-
+        invocar.algoritmia(almacen, "oso");
     }
 
-    //* En este metodo vamos a contener los objetos
-    public void objetos()
-    {
-
-    }
-
-    //* En este metodo vamos a crear el algoritmo que nos va a permitir hacer las búsquedas que requerimos
-    public void algoritmia()
-    {
-
-    }
-
-    //* En este metodo vamos a tratar de combinar y agrupar el algoritmo con los datos y objetos
-    public String gestionUnion()
-    {
-        for(int i = 0; i < almacen.size(); i++)
-        {
-            if(almacen.get(i).equals(busqueda) )
-            {
-                return "Elemento encontrado en el indice" + i;
-            }
-        }
-        return "Elemento no encontrado";
-    }
 }
