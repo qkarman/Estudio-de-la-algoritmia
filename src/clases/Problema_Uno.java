@@ -74,7 +74,9 @@ public class Problema_Uno
 
         JOptionPane.showMessageDialog(null,"Datos almacenados: " + almacen);
 
-        invocar.algoritmia(almacen, "oso");
+        String elementoBuscar = JOptionPane.showInputDialog(null,"Digite el elemento a buscar: ");
+
+        invocar.algoritmia(almacen, elementoBuscar);
     }
 
 }

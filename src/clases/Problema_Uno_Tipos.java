@@ -8,8 +8,6 @@ import java.util.*;
 
 public class Problema_Uno_Tipos
 {
-    Problema_Uno origen = new Problema_Uno();
-
    //Creamos el metodo main para hacer pruebas en nuestra clase
    public static void main(String[] args)
    {
@@ -18,15 +16,13 @@ public class Problema_Uno_Tipos
    //*Creamos el primer metodo para crear el algoritmo con el generic <>
     public <T> void algoritmia(List<String> almacen, T elemento)
     {
-        //List<String> almacen = origen.getAlmacen(); //Accedemos a la lista con el super getter
-
         boolean encontrado = false;
 
         for(int i = 0; i < almacen.size(); i++)
         {
             if(almacen.get(i).equals(elemento))
             {
-                JOptionPane.showMessageDialog(null,"Elemento encontrado: " + almacen.get(i) + "Posicion" + i);
+                JOptionPane.showMessageDialog(null,"Elemento encontrado: " + almacen.get(i) + " Posicion: " + i);
                 encontrado = true;
                 break;
             }
