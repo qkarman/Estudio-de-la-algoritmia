@@ -5,6 +5,7 @@ public class MenuGestion
 {
     //Creamos las variables globales
     private int opcion = 0;
+    Problema_Uno invocacion = new Problema_Uno();
 
     //Creamos el metodo main para hacer pruebas de nuestro programa
     public static void main(String[] args)
@@ -23,7 +24,7 @@ public class MenuGestion
             {
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null, """
                         *** GESTION DE PROGRAMAS Y PROBLEMAS ***
-                        1.-
+                        1.- Busqueda de palabras
                         2.-
                         3.-
                         4.-
@@ -33,7 +34,7 @@ public class MenuGestion
 
                 switch(opcion)
                 {
-                    case 1 -> System.out.println("s");
+                    case 1 -> invocacion.dateNote();
                     case 2 -> System.out.println("w");
                     case 3 -> System.out.println("e");
                     default -> System.out.println(" Encontramos un problema ");
